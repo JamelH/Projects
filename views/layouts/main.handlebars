@@ -1,8 +1,12 @@
-<!doctype html>
+
+
 <html>
 <head>
 
 <title>  Meadowlark Travel </title>
+</head>
+
+
 {{#if showTests}}
 <link rel= "stylesheet"
 href = "/vendor/mocha.css">
@@ -13,6 +17,7 @@ src = "//code.jquery.com/jquery-2.0.2.min.js">
 
 
 </head>
+{{#if showTests}}
 
 <div id="mocha"></div>
 <script>
@@ -30,15 +35,19 @@ chai.assert;
 {{/if}}
 
 <script>mocha.run();</script>
-{{if}}
+{{/if}}
 </body>
+
+
+
+
 
 <body>
 
-<img src="/img/logo.png"
-alt="Meadowlark Travel Logo">
+<header><img src="/img/logo.png"
+alt="Meadowlark Travel Logo"></header>
 
-{{{body}}}
+{{body}}
 
 </body>
 </html>
