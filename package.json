@@ -1,7 +1,7 @@
 {
-  "name": "meow",
+  "name": "package.json",
   "version": "1.0.0",
-  "description": "",
+  "description": "stuff",
   "main": "meadowlark.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,5 +14,11 @@
     "jh"
   ],
   "author": "jamel",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  },
+  "dependencies": {
+    "grunt": "^0.4.5"
+  }
 }
