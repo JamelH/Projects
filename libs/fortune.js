@@ -1,4 +1,6 @@
 
+
+//some
 //array of fortune cookies
 var fortuneCookies = [ "Conquer your fears or they will conquer you",
 "Rivers need springs.",
