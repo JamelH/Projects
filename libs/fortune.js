@@ -1,6 +1,6 @@
 
 //array of fortune cookies
-var fortunes = [ "Conquer your fears or they will conquer you",
+var fortuneCookies = [ "Conquer your fears or they will conquer you",
 "Rivers need springs.",
 "Do not fear what you don't know",
 "You will have a pleasent surprise",
@@ -10,7 +10,7 @@ var fortunes = [ "Conquer your fears or they will conquer you",
 
 //encapsulation
 //exports to have this function visible outside this module
-export.getFortune = function(){
+exports.getFortune = function(){
 	var idx = Math.floor(Math.random()*
 		fortuneCookies.length);
 	return fortuneCookies[idx];

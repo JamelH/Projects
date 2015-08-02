@@ -1,6 +1,9 @@
 var express = require('express');
+var $ = require('jQuery');
+//var jsdom = require('jsdom').jsdom
+
 var app = express();
-var fortune = require('./lib/fortune.js');
+var fortune = require('./libs/fortune.js');
 
 var handlebars = require('express-handlebars')
 .create({defaultLayout:'main'});
@@ -13,6 +16,15 @@ app.set('port', process.env.Port || 3000);
 //app.use(express.static(_dirname + 'public'));
 
 
+
+
+//middleware to detect test=1
+app.use(function(req, res, next){
+	res.locals.showTests = 
+	app.get('env') !== 'production' &&
+	req.query.test === '1';
+	next();
+})
 
 
 
