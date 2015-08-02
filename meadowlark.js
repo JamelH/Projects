@@ -1,6 +1,6 @@
 var express = require('express');
 var $ = require('jQuery');
-//var jsdom = require('jsdom').jsdom
+//////var jsdom = require('jsdom').jsdom
 
 var app = express();
 var fortune = require('./libs/fortune.js');
