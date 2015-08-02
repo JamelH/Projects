@@ -24,7 +24,7 @@ app.use(function(req, res, next){
 	app.get('env') !== 'production' &&
 	req.query.test === '1';
 	next();
-})
+});
 
 
 
@@ -35,7 +35,8 @@ app.get('/', function(req, res){
 });
 
 app.get('/about', function(req, res){
-	res.render('about', { fortune: fortune.getFortune()});
+	res.render('about', { fortune: fortune.getFortune(),
+		pageTestScript: '/qa/tests-about.js'});
 });
 
 
