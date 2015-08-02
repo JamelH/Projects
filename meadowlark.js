@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var fortune = require('./lib/fortune.js');
 
 var handlebars = require('express-handlebars')
 .create({defaultLayout:'main'});
@@ -13,14 +14,6 @@ app.set('port', process.env.Port || 3000);
 
 
 
-//array of fortune cookies
-var fortunes = [ "Conquer your fears or they will conquer you",
-"Rivers need springs.",
-"Do not fear what you don't know",
-"You will have a pleasent surprise",
-"Whenever possible, keep it simple",
-
-];
 
 
 //added some routes for home page and about page
@@ -30,10 +23,7 @@ app.get('/', function(req, res){
 });
 
 app.get('/about', function(req, res){
-	var randomFortune=
-	fortunes[Math.floor(Math.random() *
-		fortunes.length)];
-	res.render('about', { fortune: randomFortune});
+	res.render('about', { fortune: fortune.getFortune()});
 });
 
 
