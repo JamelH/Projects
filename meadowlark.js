@@ -1,5 +1,5 @@
 var express = require('express');
-var $ = require('jQuery');
+//var $ = require('jQuery');
 //////var jsdom = require('jsdom').jsdom
 
 var app = express();
@@ -34,9 +34,17 @@ app.get('/', function(req, res){
 	res.render('home');
 });
 
+
+
+
 app.get('/about', function(req, res){
 	res.render('about', { fortune: fortune.getFortune(),
-		pageTestScript: '/qa/tests-about.js'});
+});
+
+
+//route for contact page
+app.get('/contact', function(req, res){
+	res.render('contact');
 });
 
 
